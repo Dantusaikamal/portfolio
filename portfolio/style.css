@@ -128,6 +128,17 @@ span h1{
     		width:100%;
    	} 
 }
+.icon-team i {
+	padding-bottom: 200px;
+    font-size: 25px;
+    margin: 5px 6px;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.icon-team i:hover {
+    color: #53c5d5;
+    cursor: pointer;
+}
  
 
 @media (min-width:768px) and (max-width:991px){
