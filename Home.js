@@ -6,7 +6,7 @@
 // import gamestackTexture from 'assets/gamestack-login.jpg';
 // import sliceTextureLarge from 'assets/slice-app-large.jpg';
 // import sliceTexturePlaceholder from 'assets/slice-app-placeholder.jpg';
-// import sliceTexture from 'assets/relationship-map.png';
+// import sliceTexture from 'assets/relationship-map.PNG';
 // import sprTextureLarge from 'assets/spr-lesson-builder-dark-large.jpg';
 // import sprTexturePlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
 // import sprTexture from 'assets/spr-lesson-builder-dark.jpeg';
