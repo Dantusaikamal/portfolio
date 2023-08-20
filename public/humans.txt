@@ -1,0 +1,39 @@
+__  __  __
+\ \ \ \ \/
+ \ \/\ \
+  \/  \/
+
+The humans.txt file explains the team, technology,
+and graphic assets behind this site humanstxt.org.
+
+_______________________________________________________________________________
+
+Developer | デザイナー
+
+Dantu Sai Kamal
+Hand crafted design & web development
+
+Tools:
+Full Stack Development | Web + Mobile
+Cloud
+Machine Learning
+
+twitter.com/saikamaldantu
+github.com/dantusaikamal
+
+_______________________________________________________________________________
+
+TECHNOLOGY | テクノロジー
+
+React
+Next.js
+Three.js
+Flutter
+AWS
+
+_______________________________________________________________________________
+
+FONTS | フォント
+
+Gotham
+Hiragino Kaku Gothic
