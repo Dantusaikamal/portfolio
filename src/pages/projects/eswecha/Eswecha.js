@@ -129,7 +129,7 @@ export const Eswecha = () => {
               <ProjectSectionHeading>Challenges and Goals</ProjectSectionHeading>
               <ProjectSectionText>
                 eswecha-os project initiated to overcome the limitations posed by
-                conventional operating systems in catering to engineers' diverse
+                conventional operating systems in catering to engineers diverse
                 requirements. I recognized the need to address the shortcomings of
                 existing operating systems. The project aimed to develop a comprehensive,
                 robust platform that would enhance collaboration, ease of use, and
