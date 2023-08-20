@@ -1,6 +1,6 @@
 import sliceAppPlaceholder from 'assets/slice-app-placeholder.jpg';
 import sliceBackgroundPlaceholder from 'assets/slice-background-placeholder.jpg';
-import dashboardBackground from 'assets/relationship-map.png';
+import dashboardBackground from 'assets/relationship-map.PNG';
 import sliceIrlPlaceholder from 'assets/slice-irl-placeholder.jpg';
 import sliceIrl from 'assets/slice-irl.jpg';
 import sliceSidebarAnnotationsPlaceholder from 'assets/slice-sidebar-annotations-placeholder.png';
