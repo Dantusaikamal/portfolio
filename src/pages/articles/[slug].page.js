@@ -65,7 +65,7 @@ export const getStaticPaths = async () => {
     .map(slug => ({ params: { slug } }));
 
   return {
-    paths,
-    fallback: false,
+    paths: [], // Empty array, or fetch dynamic paths from your data source
+    fallback: true, // Set to true
   };
 };
