@@ -128,6 +128,7 @@ export const Eswecha = () => {
             <ProjectTextRow>
               <ProjectSectionHeading>Challenges and Goals</ProjectSectionHeading>
               <ProjectSectionText>
+                  {/* eslint-disable react/no-unescaped-entities */}
                 eswecha-os project initiated to overcome the limitations posed by
                 conventional operating systems in catering to engineers diverse
                 requirements. I recognized the need to address the shortcomings of
