@@ -175,6 +175,7 @@ export const Eswecha = () => {
             >
               <ProjectSection>
                 <ProjectSectionContent width="xl">
+    
                   <ProjectTextRow justify="end" width="s">
                     <ProjectSectionHeading level={4} as="h3">
                       Crafting a Digital Nexus
