@@ -14,7 +14,8 @@ import rehypePrism from '@mapbox/rehype-prism';
 import { generateOgImage } from './og-image';
 
 export default function PostPage({ frontmatter, code, timecode, ogImage }) {
-  const MDXComponent = useMemo(() => getMDXComponent(code), [code]);
+  const MDXComponent = getMDXComponent(code);
+
   return (
     <Post timecode={timecode} ogImage={ogImage} {...frontmatter}>
       <MDXComponent components={postMarkdown} />

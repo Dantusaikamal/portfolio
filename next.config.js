@@ -3,6 +3,7 @@ module.exports = {
   trailingSlash: true,
   pageExtensions: ['page.js', 'api.js'],
   experimental: { appDir: false },
+  mdxRs: true,
   webpack(config, { isServer }) {
     // Run custom scripts
     if (isServer) {
