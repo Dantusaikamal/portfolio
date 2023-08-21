@@ -71,6 +71,6 @@ export const getStaticPaths = async () => {
 
   return {
     paths, // Empty array, or fetch dynamic paths from your data source
-    fallback: true, // Set to true
+    fallback: false, // Set to true
   };
 };
