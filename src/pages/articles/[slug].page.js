@@ -15,12 +15,6 @@ import { generateOgImage } from './og-image';
 
 export default function PostPage({ frontmatter, code, timecode, ogImage }) {
   const MDXComponent = useMemo(() => getMDXComponent(code), [code]);
-// let MDXComponent = useMemo(() => {
-//   if (code) {
-//     return getMDXComponent(code);
-//    }
-// return <div/>
-//  }, [code]);
   return (
     <Post timecode={timecode} ogImage={ogImage} {...frontmatter}>
       <MDXComponent components={postMarkdown} />
