@@ -102,7 +102,7 @@ const PostStrong = props => {
 const PostImage = ({ src, alt, width, height, ...rest }) => {
   return (
     <img
-      className={styles.image}
+      className={styles.image && <Image src={styles.image} alt="" layout="responsive" />}
       src={src}
       decoding="async"
       loading="lazy"
