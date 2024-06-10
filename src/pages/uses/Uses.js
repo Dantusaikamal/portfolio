@@ -21,10 +21,7 @@ import styles from './Uses.module.css';
 export const Uses = () => {
   return (
     <Fragment>
-      <Meta
-        title="Uses"
-        description="A list of technologies that I use for my daily work."
-      />
+      <Meta title="Tech Stack" description="A list of technologies that I use." />
       <ProjectContainer className={styles.uses}>
         <ProjectBackground
           src={{ src: usesBackground }}
@@ -33,7 +30,7 @@ export const Uses = () => {
         />
         <ProjectHeader
           title="Uses"
-          description="A comprehensive list of tools, apps, hardware, and more that I use on a daily basis to code."
+          description="A comprehensive list of tools, software, hardware, and more that I use on a daily basis to code."
         />
         <ProjectSection padding="none" className={styles.section}>
           <ProjectSectionContent>

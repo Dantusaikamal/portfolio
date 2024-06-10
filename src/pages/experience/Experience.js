@@ -70,7 +70,7 @@ export const Experience = () => {
         <ProjectHeader
           title={title}
           description={description}
-          url="https://drive.google.com/file/d/1A_ou2CMzGRgLUwI5jz2onjcF_GsKHYtG/view?usp=drive_link"
+          url="https://drive.google.com/file/d/1oqRTt6mjDLz45FoF62bHaqblIicW4Oga/view?usp=sharing"
           roles={roles}
           linkLabel="Resume"
         />
@@ -78,6 +78,25 @@ export const Experience = () => {
         <ProjectSection>
           <ProjectSectionContent>
             <ProjectSectionHeading>Work Experience</ProjectSectionHeading>
+            <ProjectSectionText>
+              <span style={{ fontWeight: 'bold', color: '#00E5FF' }}>
+                Full Stack Developer | ELP Aviation (Hyderabad) | Aug’2023 – Present
+              </span>
+              <br />
+              • Developed and maintained the Crew Portal for leading airlines including
+              Kalitta, Frontier, Piedmont, and Hawaiian, enhancing crew member access to
+              key functionalities and improving operational efficiency. Utilized Flutter
+              for mobile and Angular for web applications and Node.js for backend.
+              <br />
+              • Contributed to the Crew Pay application, automating payroll processes and
+              reducing discrepancies by 60%.
+              <br />
+              • Designed scalable microservices with Node.js and Docker, reducing response
+              times by 40% and ensuring high availability. Managed RESTful API services
+              and database interactions for robust backend functionality.
+              <br />• Implemented CI/CD pipelines in Bitbucket, streamlining development
+              workflows and ensuring reliable software releases.
+            </ProjectSectionText>
             <ProjectSectionText>
               <span style={{ fontWeight: 'bold', color: '#00E5FF' }}>
                 Software Development Engineering Intern | Quriverse (Bangalore) |
