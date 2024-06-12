@@ -31,4 +31,8 @@
     <loc>undefined/articles/modern-styling-in-react</loc>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>undefined/articles/webview-auth</loc>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>
