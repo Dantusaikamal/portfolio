@@ -1,6 +1,7 @@
 import 'layouts/App/reset.css';
 import 'layouts/App/global.css';
 
+import { Analytics } from '@vercel/analytics/react';
 import { Navbar } from 'components/Navbar';
 import { ThemeProvider } from 'components/ThemeProvider';
 import { tokens } from 'components/ThemeProvider/theme';
@@ -78,6 +79,7 @@ const App = ({ Component, pageProps }) => {
                 </m.div>
               </AnimatePresence>
             </main>
+            <Analytics />
           </Fragment>
         </LazyMotion>
       </ThemeProvider>
