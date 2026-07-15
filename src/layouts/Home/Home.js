@@ -3,7 +3,6 @@ import gamestackTexture2Placeholder from 'assets/gamestack-list-placeholder.jpg'
 import gamestackTexture2 from 'assets/gamestack-list.jpg';
 import gamestackTextureLarge from 'assets/gamestack-login-large.jpg';
 import gamestackTexturePlaceholder from 'assets/gamestack-login-placeholder.jpg';
-import dashboardTexture from 'assets/Dashboard-light.png';
 import dashboardTexture2 from 'assets/Dashboard-dark.png';
 import gamestackTexture from 'assets/gamestack-login.jpg';
 import sliceTexturePlaceholder from 'assets/slice-app-placeholder.jpg';
@@ -19,11 +18,11 @@ import { useEffect, useRef, useState } from 'react';
 import styles from './Home.module.css';
 
 const disciplines = [
-  'Researcher',
-  'Designer',
+  'AI + IoT Engineer',
+  'Cloud Builder',
+  'Mobile Developer',
+  'Startup Engineer',
   'ML Enthusiast',
-  'Start-up Geek',
-  'Writer',
 ];
 
 export const Home = () => {
@@ -44,8 +43,10 @@ export const Home = () => {
           if (entry.isIntersecting) {
             const section = entry.target;
             observer.unobserve(section);
-            if (visibleSections.includes(section)) return;
-            setVisibleSections(prevSections => [...prevSections, section]);
+            setVisibleSections(prevSections => {
+              if (prevSections.includes(section)) return prevSections;
+              return [...prevSections, section];
+            });
           }
         });
       },
@@ -60,22 +61,26 @@ export const Home = () => {
     );
 
     sections.forEach(section => {
-      sectionObserver.observe(section.current);
+      if (section.current) {
+        sectionObserver.observe(section.current);
+      }
     });
 
-    indicatorObserver.observe(intro.current);
+    if (intro.current) {
+      indicatorObserver.observe(intro.current);
+    }
 
     return () => {
       sectionObserver.disconnect();
       indicatorObserver.disconnect();
     };
-  }, [visibleSections]);
+  }, []);
 
   return (
     <div className={styles.home}>
       <Meta
-        title="Designer + Developer"
-        description="Portfolio of Dantu Sai Kamal — a Full Stack Engineer working on web & mobile."
+        title="Full Stack Engineer"
+        description="Portfolio of Dantu Sai Kamal - a full stack engineer building AI, IoT, mobile, and cloud products."
       />
       <Intro
         id="intro"
@@ -110,7 +115,7 @@ export const Home = () => {
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
         title="Mobile Application Development"
-        description="Built Robust mobile applications using Flutter"
+        description="Built robust mobile applications using Flutter"
         buttonText="View applications"
         buttonLink="https://github.com/Dantusaikamal?tab=repositories"
         model={{

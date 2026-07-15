@@ -3,6 +3,13 @@
   transition: fill var(--durationL) ease;
 }
 
+.letter {
+  font-family: var(--fontStack);
+  font-size: 34px;
+  font-weight: var(--fontWeightBold);
+  letter-spacing: 0;
+}
+
 .highlight {
   fill: rgb(var(--rgbAccent));
   opacity: 0;

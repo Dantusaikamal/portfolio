@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 export function useWindowSize() {
-  const dimensions = useRef(() => ({ w: 1280, h: 800 }));
+  const dimensions = useRef({ width: 1280, height: 800 });
+  const frame = useRef();
 
   const createRuler = useCallback(() => {
     let ruler = document.createElement('div');
@@ -14,8 +15,10 @@ export function useWindowSize() {
     document.documentElement.appendChild(ruler);
 
     // Set cache conscientious of device orientation
-    dimensions.current.w = window.innerWidth;
-    dimensions.current.h = ruler.offsetHeight;
+    dimensions.current = {
+      width: window.innerWidth,
+      height: ruler.offsetHeight,
+    };
 
     // Clean up after ourselves
     document.documentElement.removeChild(ruler);
@@ -28,7 +31,7 @@ export function useWindowSize() {
 
     if (isIOS) {
       createRuler();
-      return dimensions.current.h;
+      return dimensions.current.height;
     }
 
     return window.innerHeight;
@@ -45,13 +48,17 @@ export function useWindowSize() {
 
   useEffect(() => {
     const handleResize = () => {
-      setWindowSize(getSize());
+      cancelAnimationFrame(frame.current);
+      frame.current = requestAnimationFrame(() => {
+        setWindowSize(getSize());
+      });
     };
 
     window.addEventListener('resize', handleResize);
     handleResize();
 
     return () => {
+      cancelAnimationFrame(frame.current);
       window.removeEventListener('resize', handleResize);
     };
   }, [getSize]);

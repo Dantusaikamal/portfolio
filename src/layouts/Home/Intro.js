@@ -14,8 +14,9 @@ import { Fragment, useEffect, useState } from 'react';
 import { cssProps } from 'utils/style';
 import styles from './Intro.module.css';
 
-const DisplacementSphere = dynamic(() =>
-  import('layouts/Home/DisplacementSphere').then(mod => mod.DisplacementSphere)
+const DisplacementSphere = dynamic(
+  () => import('layouts/Home/DisplacementSphere').then(mod => mod.DisplacementSphere),
+  { ssr: false }
 );
 
 export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...rest }) {

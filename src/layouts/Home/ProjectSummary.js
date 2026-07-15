@@ -13,7 +13,9 @@ import { useState } from 'react';
 import { cssProps, media } from 'utils/style';
 import styles from './ProjectSummary.module.css';
 
-const Model = dynamic(() => import('components/Model').then(mod => mod.Model));
+const Model = dynamic(() => import('components/Model').then(mod => mod.Model), {
+  ssr: false,
+});
 
 export const ProjectSummary = ({
   id,
@@ -93,21 +95,23 @@ export const ProjectSummary = ({
         <>
           {renderKatakana('laptop', visible)}
           <div className={styles.model} data-device="laptop">
-            <Model
-              alt={model.alt}
-              cameraPosition={{ x: 0, y: 0, z: 8 }}
-              showDelay={700}
-              show={visible}
-              models={[
-                {
-                  ...deviceModels.laptop,
-                  texture: {
-                    ...model.textures[0],
-                    sizes: laptopSizes,
+            {visible && (
+              <Model
+                alt={model.alt}
+                cameraPosition={{ x: 0, y: 0, z: 8 }}
+                showDelay={700}
+                show={visible}
+                models={[
+                  {
+                    ...deviceModels.laptop,
+                    texture: {
+                      ...model.textures[0],
+                      sizes: laptopSizes,
+                    },
                   },
-                },
-              ]}
-            />
+                ]}
+              />
+            )}
           </div>
         </>
       )}
@@ -115,30 +119,32 @@ export const ProjectSummary = ({
         <>
           {renderKatakana('phone', visible)}
           <div className={styles.model} data-device="phone">
-            <Model
-              alt={model.alt}
-              cameraPosition={{ x: 0, y: 0, z: 11.5 }}
-              showDelay={300}
-              show={visible}
-              models={[
-                {
-                  ...deviceModels.phone,
-                  position: { x: -0.6, y: 1.1, z: 0 },
-                  texture: {
-                    ...model.textures[0],
-                    sizes: phoneSizes,
+            {visible && (
+              <Model
+                alt={model.alt}
+                cameraPosition={{ x: 0, y: 0, z: 11.5 }}
+                showDelay={300}
+                show={visible}
+                models={[
+                  {
+                    ...deviceModels.phone,
+                    position: { x: -0.6, y: 1.1, z: 0 },
+                    texture: {
+                      ...model.textures[0],
+                      sizes: phoneSizes,
+                    },
                   },
-                },
-                {
-                  ...deviceModels.phone,
-                  position: { x: 0.6, y: -0.5, z: 0.3 },
-                  texture: {
-                    ...model.textures[1],
-                    sizes: phoneSizes,
+                  {
+                    ...deviceModels.phone,
+                    position: { x: 0.6, y: -0.5, z: 0.3 },
+                    texture: {
+                      ...model.textures[1],
+                      sizes: phoneSizes,
+                    },
                   },
-                },
-              ]}
-            />
+                ]}
+              />
+            )}
           </div>
         </>
       )}
