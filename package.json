@@ -5,6 +5,9 @@
   "description": "Portfolio site for Dantu Sai Kamal",
   "repository": "https://github.com/Dantusaikamal/portfolio.git",
   "author": "Dantu Sai Kamal",
+  "engines": {
+    "node": "24.x"
+  },
   "devDependencies": {
     "@mapbox/rehype-prism": "^0.8.0",
     "@storybook/addon-a11y": "^6.5.10",
