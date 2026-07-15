@@ -21,17 +21,17 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I’m Sai Kamal, currently pursuing Master's in Information Technology at{' '}
-      <Link href="https://www.iiit.ac.in/">IIIT Hyderabad</Link> and working as a Full
-      Stack Developer at <Link href="https://elpaviation.com/">ELP Aviation</Link>. My
-      projects include Full Stack Web & Mobile Application Development, Machine Learning,
-      and Cloud Technologies. Being comfortable with both design and development allows me
-      to rapidly prototype and validate applications. If you’re interested in the tools
-      and software I use check out my <Link href="/uses">Tech Stack page</Link>.
+      I am Sai Kamal, currently pursuing an MS in Data Science at{' '}
+      <Link href="https://www.iiit.ac.in/">IIIT Hyderabad</Link> while building distributed
+      AI, IoT, cloud, web, and mobile systems as a Full Stack Developer at Replicant
+      Systems. My recent work spans LLM workflows, computer vision pipelines, Jetson edge
+      devices, AWS IoT Core, backend services, and production observability. If you are
+      interested in the tools and software I use, check out my{' '}
+      <Link href="/uses">Tech Stack page</Link>.
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
       In my spare time I like to read books, play cricket, and work on{' '}
-      <Link href="https://github.com/Dantusaikamal/">personal projects</Link>. I’m always
+      <Link href="https://github.com/Dantusaikamal/">personal projects</Link>. I am always
       down for hearing about new projects, so feel free to drop me a line.
     </Text>
   </Fragment>
@@ -64,7 +64,7 @@ export const Profile = ({ id, visible, sectionRef }) => {
                 href="/experience"
                 icon="send"
               >
-                Send me a message
+                View experience
               </Button>
             </div>
             <div className={styles.column}>

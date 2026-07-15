@@ -16,6 +16,10 @@ module.exports = {
   webpackFinal: async (config, { configType }) => {
     config.resolve.modules = [path.resolve(__dirname, '../src'), 'node_modules'];
 
+    if (configType === 'PRODUCTION') {
+      config.devtool = false;
+    }
+
     const imageRule = config.module.rules.find(rule => rule.test.test('.svg'));
     imageRule.exclude = /\.svg$/;
 
