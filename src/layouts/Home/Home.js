@@ -18,11 +18,12 @@ import { useEffect, useRef, useState } from 'react';
 import styles from './Home.module.css';
 
 const disciplines = [
-  'AI + IoT Engineer',
-  'Cloud Builder',
-  'Mobile Developer',
+  'AI Engineer',
+  'Cloud',
+  'Mobile',
   'Startup Engineer',
   'ML Enthusiast',
+  'Designer',
 ];
 
 export const Home = () => {
