@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-const siteUrl = process.env.NEXT_PUBLIC_WEBSITE_URL;
+const siteUrl = process.env.NEXT_PUBLIC_WEBSITE_URL || 'https://dantusaikamal.com';
 const name = 'Dantu Sai Kamal';
 const twitterHandle = '@saikamaldantu';
 const defaultOgImage = `${siteUrl}/social-image.png`;

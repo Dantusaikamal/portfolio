@@ -17,6 +17,7 @@ import { msToNum } from 'utils/style';
 import { ScrollRestore } from '../layouts/App/ScrollRestore';
 
 export const AppContext = createContext({});
+const siteUrl = process.env.NEXT_PUBLIC_WEBSITE_URL || 'https://dantusaikamal.com';
 
 const repoPrompt = `
 __  __  __
@@ -29,6 +30,7 @@ const App = ({ Component, pageProps }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const { route, asPath } = useRouter();
   const canonicalRoute = route === '/' ? '' : `${asPath}`;
+  const isPrivacyPolicy = route.startsWith('/privacy/');
   useFoucFix();
 
   useEffect(() => {
@@ -47,7 +49,7 @@ const App = ({ Component, pageProps }) => {
             <Head>
               <link
                 rel="canonical"
-                href={`${process.env.NEXT_PUBLIC_WEBSITE_URL}${canonicalRoute}`}
+                href={`${siteUrl}${canonicalRoute}`}
               />
             </Head>
             <VisuallyHidden
@@ -79,7 +81,7 @@ const App = ({ Component, pageProps }) => {
                 </m.div>
               </AnimatePresence>
             </main>
-            <Analytics />
+            {!isPrivacyPolicy && <Analytics />}
           </Fragment>
         </LazyMotion>
       </ThemeProvider>

@@ -1,6 +1,8 @@
 const fs = require('fs');
 const { bundleMDX } = require('mdx-bundler');
 
+const siteUrl = process.env.NEXT_PUBLIC_WEBSITE_URL || 'https://dantusaikamal.com';
+
 function addPage(page) {
   const path = page
     .replace('src/pages', '')
@@ -11,9 +13,10 @@ function addPage(page) {
 
   // Exclude 404 page and generated `[]` pages
   if (route.includes('[') || route.includes('404')) return;
+  if (route.startsWith('/privacy/')) return;
 
   return `  <url>
-    <loc>${`${process.env.NEXT_PUBLIC_WEBSITE_URL}${route}`}</loc>
+    <loc>${`${siteUrl}${route}`}</loc>
     <changefreq>monthly</changefreq>
   </url>`;
 }
@@ -27,7 +30,7 @@ async function addPost(post) {
   const path = post.replace('src/posts', '/articles').replace('.mdx', '');
 
   return `  <url>
-    <loc>${`${process.env.NEXT_PUBLIC_WEBSITE_URL}${path}`}</loc>
+    <loc>${`${siteUrl}${path}`}</loc>
     <changefreq>monthly</changefreq>
   </url>`;
 }

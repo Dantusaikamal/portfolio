@@ -1,38 +1,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>undefined/</loc>
+    <loc>https://dantusaikamal.com/</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>undefined/articles/</loc>
+    <loc>https://dantusaikamal.com/articles/</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>undefined/experience/</loc>
+    <loc>https://dantusaikamal.com/experience/</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>undefined/uses/</loc>
+    <loc>https://dantusaikamal.com/uses/</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>undefined/projects/churn/</loc>
+    <loc>https://dantusaikamal.com/projects/churn/</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>undefined/projects/eswecha/</loc>
+    <loc>https://dantusaikamal.com/projects/eswecha/</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>undefined/articles/hello-world</loc>
+    <loc>https://dantusaikamal.com/articles/hello-world</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>undefined/articles/modern-styling-in-react</loc>
+    <loc>https://dantusaikamal.com/articles/modern-styling-in-react</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>undefined/articles/webview-auth</loc>
+    <loc>https://dantusaikamal.com/articles/webview-auth</loc>
     <changefreq>monthly</changefreq>
   </url>
 </urlset>
